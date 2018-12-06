@@ -1,0 +1,36 @@
+<div class="DishesForm">
+@using Crudelicious.Models
+@model Dishes
+
+  <Header>
+    <h2>Add a new Dish!</h2>
+    
+    <a href="/">Home</a>
+  </Header>
+  <form asp-action="EditDish" asp-route-id="@Model.Id" asp-controller="Home" method="POST"   >
+    <label asp-for="Chef">Chef</label>
+    <input asp-for="Chef" value="@Model.Chef">
+    <span asp-validation-for="Chef"></span>
+    
+    <label asp-for="Name">Name</label>
+    <input asp-for="Name" value="@Model.Name">
+    <span asp-validation-for="Name"></span>
+    
+    <label asp-for="Calories">Calories</label>
+    <input asp-for="Calories" value="@Model.Calories">
+    <span asp-validation-for="Calories"></span>
+    
+    <label asp-for="Tastiness">Tastiness</label>
+    <select asp-for="Tastiness" >
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+    </select>
+    <label asp-for="Description">Description</label>
+    <textarea asp-for="Description" cols="30" rows="8" value="@Model.Description"></textarea>
+    <span asp-validation-for="Description"></span>
+    <button  type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>

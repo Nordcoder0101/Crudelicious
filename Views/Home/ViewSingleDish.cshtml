@@ -1,0 +1,13 @@
+@using Crudelicious.Models
+@model Dishes
+
+<a href="/">Home</a>
+<h1>@Model.Name</h1>
+<h3>@Model.Chef</h3>
+<hr>
+<p>@Model.Description</p>
+<p><B>Calories:</B>@Model.Calories</p>
+<p><B>Tastiness:</B>@Model.Tastiness</p>
+
+<a href="/delete/@Model.Id" class="btn btn-danger">Delete</a>
+<a href="/edit/@Model.Id" class="btn btn-primary">Edit</a>

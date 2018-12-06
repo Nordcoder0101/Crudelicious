@@ -1,0 +1,20 @@
+@using Crudelicious.Models
+@model List<Dishes>
+  <div class="home">
+   <header>
+        <h1 class="test">Welcome to CRUDelicious</h1>
+    </header>
+    <main>
+        <h5>Check out some recent dishes</h5>
+        <a class="AddNewDish" href="/ShowAddNewDish">Add a new dish</a>
+        <hr> 
+@{
+    foreach (var d in @Model)
+    {
+
+        <p><a href=/show/@d.Id>@d.Name</a> by @d.Chef</p>
+    }
+
+}
+    </main>
+  </div> 
